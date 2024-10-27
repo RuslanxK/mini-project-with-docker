@@ -29,14 +29,11 @@ export default defineConfig(({ mode }) => {
       'process.env': processEnv, 
     },
     server: {
-
-      host: true,
-      // Uncomment if proxy is needed
-      /*
-      proxy: {
-        '/api': 'http://localhost:8080',
+      watch: {
+        usePolling: true,
+        interval: 1000, 
       },
-      */
+      host: true, 
     },
     build: {
       sourcemap: true,
