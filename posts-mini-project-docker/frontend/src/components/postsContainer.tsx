@@ -1,5 +1,5 @@
 // PostsContainer.tsx
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useFetchData } from '../hooks/useAPI';
 import { API_URLS } from '../utils/api';
 import Posts from './posts';
@@ -10,9 +10,9 @@ const PostsContainer: React.FC = () => {
 
   const typedError = error instanceof Error ? error : null;
 
-  const handleReadMoreClick = (postId: string) => {
-    alert(`Clicked on post ID: ${postId}`);
-  };
+  const handleReadMoreClick = useCallback((postId: string) => {
+    console.log(`Clicked on post ID: ${postId}`);
+  }, []);
 
   return (
     <Posts

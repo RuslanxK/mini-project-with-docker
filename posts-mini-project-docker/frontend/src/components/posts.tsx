@@ -10,6 +10,7 @@ interface PostsProps {
   onReadMore?: (postId: string) => void; 
 }
 
+
 const Posts: React.FC<PostsProps> = ({ postsData, isLoading = false, error = null, onReadMore }) => {
   if (isLoading) return <p className="text-center text-lg font-semibold text-gray-500 animate-pulse">Loading...</p>;
 
