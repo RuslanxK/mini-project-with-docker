@@ -1,10 +1,10 @@
 import { Fragment } from "react/jsx-runtime"
-import Posts from "./components/posts"
+import PostsContainer from "./components/postsContainer"
 
 const App = () => {
   return (
     <Fragment>
-     <Posts />
+     <PostsContainer />
     </Fragment>
   )
 }

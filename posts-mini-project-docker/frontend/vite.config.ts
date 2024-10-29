@@ -20,6 +20,12 @@ export default defineConfig(({ mode }) => {
   return {
     envDir: './env',
     plugins: [react(), tsconfigPaths(), svgrPlugin()],
+    test: {
+      globals: true,
+      environment: 'jsdom',
+      setupFiles: './tests/setup.ts',
+      css: true,
+    },
     css: {
       postcss: {
         plugins: [tailwindcss()],
